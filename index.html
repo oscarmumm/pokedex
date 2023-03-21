@@ -11,19 +11,19 @@
   <main class="main-container">
     <div class="pokedex" id="pokedex">
       <div class="pokedex-lights" id="pokedex-lights">
-        <div class="lightblue-light"></div>
-        <div class="red-light"></div>
-        <div class="yellow-light"></div>
-        <div class="green-light"></div>
+        <div class="lightblue-light" id="lightblue-light"></div>
+        <div class="red-light" id="red-light"></div>
+        <div class="yellow-light" id="yellow-light"></div>
+        <div class="green-light" id="green-light"></div>
       </div>
       <div class="pokedex-screen-container" id="pokedex-screen-container">
         <div class="pokedex-outer-screen" id="pokedex-outer-screen">
           <div class="pokedex-inner-screen" id="pokedex-inner-screen">
-            <img class="pokemon-picture" id="pokemon-picture" src="" alt="">
             <div class="pokemon-main-data" id="pokemon-main-data">
               <span class="pokemon-name" id="pokemon-name"></span>
               <span class="pokemon-number" id="pokemon-number"></span>
             </div>
+            <img class="pokemon-picture" id="pokemon-picture" src="" alt="">
             <div class="pokemon-misc-data" id="pokemon-misc-data">
               <span class="pokemon-type" id="pokemon-type"></span>
               <span class="pokemon-height" id="pokemon-height"></span>
@@ -45,6 +45,13 @@
         <input class="search-input" id="search-input" type="text" placeholder="Escribe el nombre del pokemon">
         <button class="search-btn" id="search-btn">BUSCAR</button>
       </div>
+      
+      <footer class="footer">
+        <p>Esta página utiliza información provista por la API de <a href="https://openweathermap.org/api" target="_blank">pokeapi.co</a> </p>
+        <br>
+        <p>Contacto del programador: </p>
+        <a href="https://www.linkedin.com/in/oscar-mumm/" target="_blank"> <img src="./assets/icons/linkedin-svgrepo-com.svg" alt=""> </a>
+      </footer>
     </div>
   </main>
 
