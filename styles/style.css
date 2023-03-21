@@ -10,7 +10,7 @@ font-family: 'Press Start 2P', cursive;
   --pokedex-bg: #D52D2B;
   --pokedex-bg-gradient: linear-gradient(#D52D2B 60%, #6e1816);
   --screen-off-bg: linear-gradient(#3a3939, #000);
-  --screen-on-bg: linear-gradient(#b3efff, #5e92a0);
+  --screen-on-bg: linear-gradient(#b3efff, #dbf7ff);
 }
 
 * {
@@ -68,7 +68,7 @@ body {
 }
 
 .pokedex-screen-container {
-  margin-top: 5vh;
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
   font-family: 'Press Start 2P', cursive;
@@ -115,14 +115,14 @@ body {
 }
 
 .search-controls {
-  padding-top: 5vh;
+  padding-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .previous-next-controls {
-  padding-top: 5vh;
+  padding-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
