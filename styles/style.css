@@ -1,7 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&family=Press+Start+2P&display=swap');
+
+/*
+font-family: 'Maven Pro', sans-serif;
+font-family: 'Press Start 2P', cursive;
+*/
 
 :root {
   --pokedex-bg: #D52D2B;
+  --pokedex-bg-gradient: linear-gradient(#D52D2B 60%, #6e1816);
+  --screen-off-bg: linear-gradient(#3a3939, #000);
+  --screen-on-bg: linear-gradient(#b3efff, #5e92a0);
 }
 
 * {
@@ -16,8 +25,8 @@ body {
 }
 
 .pokedex {
-  background: linear-gradient(#D52D2B 60%, #6e1816);
-  height: 100vh;
+  background: linear-gradient(#D52D2B 60%, #801d1b);
+  min-height: 100vh;
 }
 
 .pokedex-lights {
@@ -25,6 +34,8 @@ body {
   display: flex;
   flex-direction: row;
   padding: 1rem;
+  border-radius: 0 0 50px 0;
+  box-shadow: -8px -8px #801d1b inset;
 }
 
 .lightblue-light {
@@ -60,13 +71,16 @@ body {
   margin-top: 5vh;
   display: flex;
   justify-content: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  line-height: 150%;
 }
 
 .pokedex-outer-screen {
   width: 350px;
-  height: 350px;
+  height: 450px;
   background: #ffffff;
-  border-radius: 20px;
+  border-radius: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,16 +88,16 @@ body {
 
 .pokedex-inner-screen {
   width: 300px;
-  height: 300px;
-  border-radius: 20px;
+  height: 400px;
+  border-radius: 30px;
   border: 2px solid #333;
   background: linear-gradient(#242424, #000);
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .pokemon-picture {
-  grid-column: 1 / 3;
+  grid-column: 1 / 4;
   margin: auto;
   width: 200px;
 }
@@ -96,12 +110,28 @@ body {
   padding: 0 1rem;
 }
 
+.pokemon-misc-data {
+  grid-column: 2 / 4;
+}
 
 .search-controls {
   padding-top: 5vh;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.previous-next-controls {
+  padding-top: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.previous-next-controls button {
+  border-radius: 15px;
+  padding: 0 30px;
+  border: none;
 }
 
 .search-input,
@@ -112,4 +142,8 @@ body {
   margin: .25rem;
   font-family: 'Maven Pro', sans-serif;
   font-weight: bold;
+}
+
+.search-input {
+  width: 250px;
 }

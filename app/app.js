@@ -20,17 +20,21 @@ const getPokemonInfo = (pokemonName) => {
 };
 
 searchBtn.addEventListener('click', () => {
-  getPokemonInfo(searchInput.value);
+  getPokemonInfo((searchInput.value).toLowerCase());
 });
+
+const stringToCapítalize = (string) => {
+  return string.slice(0, 1).toUpperCase() + string.slice(1, string.length);
+}
 
 const showInfo = (data) => {
   console.log(data)
-  pokedexInnerScreen.style.background = '#b3efff';
+  pokedexInnerScreen.style.background = 'var(--screen-on-bg)';
   pokemonPicture.src = `${data.sprites.front_default}`;
-  pokemonName.innerText = `${data.name}`;
+  pokemonName.innerText = `${stringToCapítalize(data.name)}`;
   pokemonNumber.innerText = `N° ${data.id}`;
   pokemonType.innerText = `Type: ${data.types[0].type.name}`;
-  pokemonHeight.innerText = `Height: ${(data.height)*0.1}m`
-  pokemonWeight.innerText = `Weight: ${(data.weight)*0.1}kg`
-  pokemonAbilities.innerText = `Abilities: ${data.abilities[0].ability.name}`
-}
+  pokemonHeight.innerText = `Height: ${((data.height)*0.1).toFixed(2)}m`;
+  pokemonWeight.innerText = `Weight: ${((data.weight)*0.1).toFixed(2)}kg`;
+  pokemonAbilities.innerText = `Abilities: ${data.abilities[0].ability.name}`;
+};
