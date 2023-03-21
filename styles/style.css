@@ -22,20 +22,38 @@ font-family: 'Press Start 2P', cursive;
 
 body {
   font-family: 'Maven Pro', sans-serif;
+  min-height: 100vh;
+  background: rgb(42,134,193);
+  background: linear-gradient(347deg, rgba(42,134,193,1) 40%, rgba(0,254,255,1) 100%);
+}
+
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pokedex {
   background: linear-gradient(#D52D2B 60%, #801d1b);
-  min-height: 100vh;
+  max-height: 850px;
+  max-width: 576px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
 
 .pokedex-lights {
   width: 250px;
+  height: 110px;
   display: flex;
   flex-direction: row;
   padding: .5rem;
   border-radius: 0 0 50px 0;
   box-shadow: -8px -8px #801d1b inset;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .lightblue-light {
@@ -73,7 +91,7 @@ body {
 }
 
 .pokedex-screen-container {
-  margin-top: 1.5rem;
+  margin-top: 120px;
   display: flex;
   justify-content: center;
   font-family: 'Press Start 2P', cursive;
@@ -117,14 +135,16 @@ body {
 }
 
 .search-controls {
-  padding-top: 2rem;
+  width: 330px;
+  padding-top: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .previous-next-controls {
-  padding-top: 2rem;
+  width: 330px;
+  padding-top: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -166,4 +186,16 @@ body {
 .footer img {
   width: 40px;
   filter: invert(1);
+}
+
+@media (min-width: 576px) {
+  .pokedex-lights {
+    position: absolute;
+  }
+  .pokedex {
+    margin: 20px;
+    border-radius: 30px;
+    border: 5px solid #801d1b;
+    box-shadow: 5px 5px #801d1b;
+  }
 }
