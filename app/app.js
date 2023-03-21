@@ -47,6 +47,7 @@ const stringToCapítalize = (string) => {
 }
 
 const showInfo = (data) => {
+  d.documentElement.scrollTop = 0;
   pokedexInnerScreen.style.background = 'var(--screen-on-bg)';
   pokemonPicture.src = `${data.sprites.front_default}`;
   pokemonName.innerText = `${stringToCapítalize(data.name)}`;
@@ -61,6 +62,7 @@ const showInfo = (data) => {
 };
 
 const showError = () => {
+  d.documentElement.scrollTop = 0;
   pokedexInnerScreen.style.background = 'var(--screen-on-bg)';
   pokemonPicture.src = '';
   pokemonNumber.innerText = '';

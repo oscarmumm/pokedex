@@ -85,9 +85,13 @@ body {
   background: #417038;
 }
 
+.opacity {
+  filter: brightness(50%);
+}
+
 .light-on {
   filter: brightness(200%);
-  box-shadow: 0 0 30px #fff;
+  box-shadow: 0 0 30px 5px #fff;
 }
 
 .pokedex-screen-container {
