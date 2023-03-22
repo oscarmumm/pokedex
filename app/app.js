@@ -27,10 +27,11 @@ const getPokemonInfo = (pokemonName) => {
     .then((data) => showInfo(data))
     .catch(error => {
       showError();
-    })
+    });
 };
 
 searchBtn.addEventListener('click', () => {
+  d.documentElement.scrollTop = 0;
   getPokemonInfo((searchInput.value).toLowerCase());
 });
 
@@ -47,7 +48,6 @@ const stringToCapítalize = (string) => {
 }
 
 const showInfo = (data) => {
-  d.documentElement.scrollTop = 0;
   pokedexInnerScreen.style.background = 'var(--screen-on-bg)';
   pokemonPicture.src = `${data.sprites.front_default}`;
   pokemonName.innerText = `${stringToCapítalize(data.name)}`;
@@ -58,6 +58,7 @@ const showInfo = (data) => {
   pokemonAbilities.innerText = `Abilities: ${data.abilities[0].ability.name}`;
   redLight.classList.remove('light-on');
   lightBlueLight.classList.add('light-on');
+  greenLight.classList.add('light-on');
   return lastSearchId = `${data.id}`;
 };
 
@@ -73,4 +74,5 @@ const showError = () => {
   pokemonName.innerText = `Error en la búsqueda. Revise que el nombre esté bien escrito`;
   redLight.classList.add('light-on');
   lightBlueLight.classList.remove('light-on');
+  greenLight.classList.remove('light-on');
 } 
